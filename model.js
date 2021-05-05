@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-mongoose.connect('mongodb+srv://web4200:htcENZ61WYGs6Sok@cluster0.cxlp3.mongodb.net/bookListWithUsers?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://web4200:MYPASSWORD@cluster0.cxlp3.mongodb.net/bookListWithUsers?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 const userSchema = mongoose.Schema({
 	email: {
