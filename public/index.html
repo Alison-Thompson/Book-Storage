@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Styling -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+		<div id="app">
+			<div id="header"></div>
+			<div id="headerTextWrapper">
+				<h1 id="headerText">Books and Stuff</h1>
+			</div>
+
+			<!-- Search Mode wrapper -->
+			<div v-if="mode == 0">
+
+				<div id="searchBar"></div>
+				<div id="physicalHeader"></div>
+				<div id="kindleHeader"></div>
+				<div id="audibleHeader"></div>
+
+				<div id="searchBarTextWrapper">
+					<input id="search" type="search" v-model="searchInput" placeholder="Search For a Book." v-on:keyup="SearchChanged" />
+				</div>
+				<div id="physicalHeaderTextWrapper">
+					<p id="physicalHeaderText">Physical</p>
+				</div>
+				<div id="kindleHeaderTextWrapper">
+					<p id="kindleHeaderText">Kindle</p>
+				</div>
+				<div id="audibleHeaderTextWrapper">
+					<p id="audibleHeaderText">Audible</p>
+				</div>
+
+				<div id="searchColumn"></div>
+				<div id="physicalColumn"></div>
+				<div id="kindleColumn"></div>
+				<div id="audibleColumn"></div>
+
+				<div id="searchItemsWrapper">
+					<div class="item" v-for="book in searchResults" v-on:click="ViewItem(book)">
+						<p class="searchItemText"> <strong>{{ book.type }}</strong>: {{ book.name }}</p>
+					</div>
+				</div>
+				<div id="physicalItemsWrapper">
+					<div class="item" v-for="book in physicalBooks" v-on:click="ViewItem(book)">
+						<p class="itemText">{{ book.name }}</p>
+					</div>
+				</div>
+				<div id="kindleItemsWrapper">
+					<div class="item" v-for="book in kindleBooks" v-on:click="ViewItem(book)">
+						<p class="itemText">{{ book.name }}</p>
+					</div>
+				</div>
+				<div id="audibleItemsWrapper">
+					<div class="item" v-for="book in audibleBooks" v-on:click="ViewItem(book)">
+						<p class="itemText">{{ book.name }}</p>
+					</div>
+				</div>
+
+				<button class="button" id="physicalButton" v-on:click="AddNewPhysical">+</button>
+				<button class="button" id="kindleButton" v-on:click="AddNewKindle">+</button>
+				<button class="button" id="audibleButton" v-on:click="AddNewAudible">+</button>
+
+			<!-- End of search mode wrapper -->
+			</div>
+
+			<!-- Start of view mode wrapper -->
+			<div v-else-if="mode == 1 || mode == 2">
+
+				<div id="viewContainer"></div>
+
+				<div id="bookName">
+					<p v-if="mode == 1" id="bookNameText">{{ currentBookName }}</p>
+					<input v-else v-model="bookNameInput" type="text" id="bookNameInput" placeholder="Book Name">
+				</div>
+				<div id="author">
+					<p v-if="mode == 1" id="authorText">{{ currentAuthor }}</p>
+					<input v-else v-model="authorInput" type="text" id="authorInput" placeholder="Author">
+				</div>
+				<div id="datePublished">
+					<p v-if="mode == 1" id="datePublishedText">{{ currentDatePublished }}</p>
+					<input v-else v-model="datePublishedInput" type="text" id="datePublishedInput" placeholder="Date Published">
+				</div>
+				<div id="typeOfBook">
+					<p v-if="mode == 1" id="typeOfBookText">{{ currentBookType }}</p>
+					<input v-else v-model="bookTypeInput" type="text" id="bookTypeInput" placeholder="Type of Book">
+				</div>
+
+				<div id="summaryContainer">
+					<button id="backToBooksButton" v-show="mode == 1" v-on:click="BackToBooks">Back To Books</button>
+					<button v-if="mode == 2" id="editButtonShifted" v-on:click="DoneEditing">Done Editing</button>
+					<button v-else id="editButton" v-on:click="StartEditing">Edit</button>
+					<button v-bind:id="deleteButtonStyle" v-on:click="DeleteBookButton">Delete</button>
+					<p v-if="mode == 1" id="blurb">{{ currentBlurb }}</p>
+					<textarea v-else v-model="blurbInput" type="text" id="blurb" placeholder="A short summary about the book.">{{ currentBlurb }}</textarea>
+				</div>
+				
+			<!-- End of view mode wrapper -->
+			</div>
+			<div v-else>
+				<div id="viewContainer"></div>
+				<div id="loginBlock">
+					<p class="loginText" v-if="mode == 3">Login</p>
+					<p class="loginText" v-else>Sign up</p>
+					<input class="loginEmail" type="text" placeholder="Email" v-model="loginEmail">
+					<input class="loginPassword" type="password" placeholder="Password" v-model="loginPassword">
+					<button id="submitButton" v-on:click="AttemptAuthentication">Submit</button>
+					<button class="switchModes" v-if="mode == 3" v-on:click="SwitchAuthenticationModes">Sign up</button>
+					<button class="switchModes" v-else v-on:click="SwitchAuthenticationModes">Login</button>
+				</div>
+			</div>
+
+		</div>
+
+
+
+		<!-- Javascript -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script src="serverOperations.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

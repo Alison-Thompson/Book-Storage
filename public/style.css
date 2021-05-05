@@ -1,0 +1,692 @@
+html { 
+	background: url("Images/background.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#header {
+	position: fixed;
+	top: 0px;
+	left: 2.5%;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+	background: white;
+	opacity: 30%;
+	width: 95%;
+	height: 18%;
+	z-index: -1;
+}
+
+#headerTextWrapper {
+	position: fixed;
+	top: 1%;
+	left: 3.5%;
+	border: 2px solid black;
+	background: white;
+	width: 93%;
+	height: 15%;
+	background-color: #E8C9B7;
+}
+
+#headerText {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 250%;
+}
+
+/* Search mode*/
+
+#searchBar {
+	position: fixed;
+	width: 22.25%;
+	left: 2.5%;
+	top: 20%;
+	height: 15%;
+	background-color: white;
+	opacity: 30%;
+	border: 2px solid black;
+}
+
+#searchBarTextWrapper {
+	position: fixed;
+	width: 21.25%;
+	left: 3%;
+	top: 21%;
+	height: 13%;
+	background-color: #FFE5C9;
+	border: 2px solid black;
+}
+
+#searchColumn {
+	position: fixed;
+	width: 22.25%;
+	left: 2.5%;
+	top: 37%;
+	height: 60%;
+	background-color: white;
+	opacity: 30%;
+	border: 2px solid black;
+}
+
+#searchItemsWrapper {
+	position: fixed;
+	width: 22.25%;
+	left: 2.5%;
+	top: 37%;
+	height: 60%;
+	overflow-y: auto;
+}
+
+#searchItemsWrapper::-webkit-scrollbar { width: 0 !important }
+
+#search {
+	position: fixed;
+	width: 19.25%;
+	left: 4%;
+	top: 23%;
+	height: 9%;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	font-size: 125%;
+	color: black !important;
+	padding-left: 0.5em;
+}
+
+
+
+
+#physicalHeader {
+	/* add 1.25 inbetween each header plus what was already there.*/
+	position: fixed;
+	width: 22.25%;
+	top: 20%;
+	left: 26.25%;
+	height: 15%;
+	background-color: white;
+	opacity: 30%;
+	border: 2px solid black;
+}
+
+#physicalHeaderTextWrapper {
+	position: fixed;
+	width: 21.25%;
+	top: 21%;
+	left: 26.75%;
+	height: 13%;
+	background-color: #FFE5C9;
+	border: 2px solid black;
+}
+
+#physicalColumn {
+	position: fixed;
+	width: 22.25%;
+	top: 37%;
+	left: 26.25%;
+	height: 60%;
+	background-color: white;
+	opacity: 30%;
+	border: 2px solid black;
+}
+
+#physicalItemsWrapper {
+	position: fixed;
+	width: 22.25%;
+	top: 37%;
+	left: 26.25%;
+	height: 60%;
+	overflow-y: auto;
+}
+
+#physicalItemsWrapper::-webkit-scrollbar { width: 0 !important }
+
+#physicalHeaderText {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 200%;
+}
+
+
+
+
+#kindleHeader {
+	position: fixed;
+	width: 22.25%;
+	top: 20%;
+	left: 51%;
+	height: 15%;
+	background-color: white;
+	opacity: 30%;
+	border: 2px solid black;
+}
+
+#kindleHeaderTextWrapper {
+	position: fixed;
+	width: 21.25%;
+	top: 21%;
+	left: 51.5%;
+	height: 13%;
+	background-color: #FFE5C9;
+	border: 2px solid black;
+}
+
+#kindleColumn {
+	position: fixed;
+	width: 22.25%;
+	top: 37%;
+	left: 51%;
+	height: 60%;
+	background-color: white;
+	opacity: 30%;
+	border: 2px solid black;
+}
+
+#kindleItemsWrapper {
+	position: fixed;
+	width: 22.25%;
+	top: 37%;
+	left: 51%;
+	height: 60%;
+	overflow-y: auto;
+}
+
+#kindleItemsWrapper::-webkit-scrollbar { width: 0 !important }
+
+#kindleHeaderText {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 200%;
+}
+
+
+
+
+#audibleHeader {
+	position: fixed;
+	width: 22.25%;
+	top: 20%;
+	left: 75.25%;
+	height: 15%;
+	background-color: white;
+	opacity: 30%;
+	border: 2px solid black;
+}
+
+#audibleHeaderTextWrapper {
+	position: fixed;
+	width: 21.25%;
+	top: 21%;
+	left: 75.75%;
+	height: 13%;
+	background-color: #FFE5C9;
+	border: 2px solid black;
+}
+
+#audibleColumn {
+	position: fixed;
+	width: 22.25%;
+	top: 37%;
+	left: 75.25%;
+	height: 60%;
+	background-color: white;
+	opacity: 30%;
+	border: 2px solid black;
+}
+
+#audibleItemsWrapper {
+	position: fixed;
+	width: 22.25%;
+	top: 37%;
+	left: 75.25%;
+	height: 60%;
+	overflow-y: auto;
+}
+
+#audibleItemsWrapper::-webkit-scrollbar { width: 0 !important }
+
+#audibleHeaderText {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 200%;
+}
+
+
+/* Button stuff */
+
+.button {
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 100%;
+	border-radius: 50%;
+	width: 2em;
+	height: 2em;
+	cursor: pointer;
+}
+
+#physicalButton {
+	position: fixed;
+	top: calc(97% - 2em);
+	left: calc(48.5% - 2em);
+}
+
+#kindleButton {
+	position: fixed;
+	top: calc(97% - 2em);
+	left: calc(73.25% - 2em);
+}
+
+#audibleButton {
+	position: fixed;
+	top: calc(97% - 2em);
+	left: calc(97.5% - 2em);
+}
+
+.item {
+	position: relative;
+	left: 2.5%;
+	background-color: #FEDED5;
+	width: 95%;
+	height: 2.5em;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	border: 2px solid black;
+	cursor: pointer;
+}
+
+.itemText {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 150%;
+}
+
+.searchItemText {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 130%;
+}
+
+
+/* View mode */
+
+
+#viewContainer {
+	position: fixed;
+	top: 20%;
+	left: 2.5%;
+	border: 2px solid black;
+	background: white;
+	opacity: 30%;
+	width: 95%;
+	height: 77%;
+	z-index: -1;
+}
+
+#bookName {
+	position: fixed;
+	top: 22%;
+	left: 3.5%;
+	border: 2px solid black;
+	background: #FFE5C9;
+	width: 25%;
+	height: 16.75%;
+}
+
+#bookNameText {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 160%;
+}
+
+#author {
+	position: fixed;
+	top: 40.75%;
+	left: 3.5%;
+	border: 2px solid black;
+	background: #FFE5C9;
+	width: 25%;
+	height: 16.75%;
+}
+
+#authorText {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 160%;
+}
+
+#datePublished {
+	position: fixed;
+	top: 59.5%;
+	left: 3.5%;
+	border: 2px solid black;
+	background: #FFE5C9;
+	width: 25%;
+	height: 16.75%;
+}
+
+#datePublishedText {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 160%;
+}
+
+#typeOfBook {
+	position: fixed;
+	top: 78.25%;
+	left: 3.5%;
+	border: 2px solid black;
+	background: #FFE5C9;
+	width: 25%;
+	height: 16.75%;
+}
+
+#typeOfBookText {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 160%;
+}
+
+#summaryContainer {
+	position: fixed;
+	top: 22%;
+	left: 29.5%;
+	border: 2px solid black;
+	background: #FEDED5;
+	width: 67%;
+	height: 73%;
+}
+
+#backToBooksButton {
+	position: relative;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 120%;
+	width: 23%;
+	height: 13%;
+	cursor: pointer;
+	left: 76%;
+	top: 2%;
+}
+
+#editButton {
+	position: relative;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 120%;
+	width: 23%;
+	height: 13%;
+	cursor: pointer;
+	right: 18%;
+	top: 85%;
+}
+
+#editButtonShifted {
+	position: relative;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 120%;
+	width: 23%;
+	height: 13%;
+	cursor: pointer;
+	right: -5%;
+	top: 85%;
+}
+
+#deleteButton {
+	position: relative;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 120%;
+	width: 23%;
+	height: 13%;
+	cursor: pointer;
+	left: 26%;
+	top: 85%;
+}
+
+#deleteButtonShifted {
+	position: relative;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 120%;
+	width: 23%;
+	height: 13%;
+	cursor: pointer;
+	left: 49%;
+	top: 85%;
+}
+
+#blurb {
+	position: relative;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 63%;
+	font-size: 150%;
+}
+
+/* Edit mode */
+
+#bookNameInput {
+	position: fixed;
+	width: calc(20.25% + 1px); /* Why is this centered? XD*/
+	left: 5.5%;
+	top: 24%;
+	height: 12.75%;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	font-size: 125%;
+	color: black !important;
+	padding-left: 0.5em;
+}
+
+#authorInput {
+	position: fixed;
+	width: calc(20.25% + 1px);
+	left: 5.5%;
+	top: 42.75%;
+	height: 12.75%;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	font-size: 125%;
+	color: black !important;
+	padding-left: 0.5em;
+}
+
+#datePublishedInput {
+	position: fixed;
+	width: calc(20.25% + 1px);
+	left: 5.5%;
+	top: 61.5%;
+	height: 12.75%;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	font-size: 125%;
+	color: black !important;
+	padding-left: 0.5em;
+}
+
+#bookTypeInput {
+	position: fixed;
+	width: calc(20.25% + 1px);
+	left: 5.5%;
+	top: 80.25%;
+	height: 12.75%;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	font-size: 125%;
+	color: black !important;
+	padding-left: 0.5em;
+}
+
+textarea {
+	background-color: #E8BBB7;
+	padding: 0.5em;
+	box-sizing: border-box;
+}
+
+/* Login and Signup stuff */
+
+#loginBlock {
+	position: fixed;
+	top: 22%;
+	left: 3.5%;
+	border: 2px solid black;
+	background: #FFE5C9;
+	width: 93%;
+	height: 73%;
+}
+
+.loginText {
+	position: fixed;
+	left: 50%;
+	top: 27%;
+	width: 50%;
+	margin-left: -calc(25%);
+	transform: translate(-50%, -50%);
+	font-size: 300%;
+	text-align: center;
+}
+
+.loginEmail {
+	position: fixed;
+	top: 35%;
+	left: 37.5%;
+	width: 25%;
+	height: 10%;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	font-size: 125%;
+	color: black !important;
+	padding-left: 0.5em;
+}
+
+.loginPassword {
+	position: fixed;
+	top: 50%;
+	left: 37.5%;
+	width: 25%;
+	height: 10%;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	font-size: 125%;
+	color: black !important;
+	padding-left: 0.5em;
+}
+
+#submitButton {
+	position: fixed;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 120%;
+	width: 15%;
+	height: 7%;
+	top: 65%;
+	left: 42.5%;
+	cursor: pointer;
+}
+
+.switchModes {
+	position: fixed;
+	background-color: #E8BBB7;
+	border: 2px solid black;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 120%;
+	width: 15%;
+	height: 7%;
+	top: 87%;
+	left: 42.5%;
+	cursor: pointer;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
+@media (max-width: 1212px) {
+	.itemText {
+		position: relative;
+		float: left;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 100%;
+	}
+
+	.searchItemText {
+		position: relative;
+		float: left;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 90%;
+	}
+}
